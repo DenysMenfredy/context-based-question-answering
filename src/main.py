@@ -10,14 +10,14 @@ def get_model():
     return tokenizer, model
 
 if __name__ == '__main__':
-    
     tokenizer, model = get_model()
     st.title("Write a context and then ask questions about it")
-    st.text_area("Type your context", key="context")
-    st.text_input("Type your question", key="question")
-    if st.button("Generate Response"):
-        answer = get_answer(tokenizer, model, st.session_state.question, st.session_state.context)
-        st.write(answer)
+    st.text_area("Type your context", key="context", height=400)
+    question = st.chat_input("Type your question")
+    if question:
+        answer = get_answer(tokenizer, model, question, st.session_state.context)
+        st.chat_message("user").write(question)
+        st.chat_message("assistant").write(f"Answer: {answer}")
         #st.write(st.session_state.question)
 
 
