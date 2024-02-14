@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: context-based-question-answering
+Version: 1.0
+Summary: Question Answering Using HF PreTrained model
+Author-email: Denys Menfredy <denys.menfredy7@gmail.com>
+Keywords: machine-learning,python,huggingface,pytorch,streamlit,nlp
+Requires-Python: >3.8
+Requires-Dist: torch>=2.2.0
+Requires-Dist: transformers>=4.37.2
+Requires-Dist: streamlit>=1.31.1
