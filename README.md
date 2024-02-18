@@ -11,3 +11,11 @@ This repository contains the code for a machine learning context based question 
 ```
     streamlit run src/main.py
 ```
+- You can also use docker to run:
+```
+    docker build -t question-answering .
+```
+
+```
+    docker run -p 8501:8501 question-answering
+```
